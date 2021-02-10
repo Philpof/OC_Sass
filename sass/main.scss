@@ -1,3 +1,12 @@
 // 0imports : l'ordre des "imports" est important, les fichiers sont compilés dans l'ordre donné
+// Exemple d'ordre efficace :
+// - Utils : variables, fonctions, mixins, placeholders
+// - Feuilles de style de tiers (vendors) (si'il y en a)
+// - Base
+// - Composants
+// - Layout
+// - Pages
+// - Thèmes
+
 @import"./utils/variables";
 @import"./layout/form";
