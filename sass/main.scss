@@ -27,3 +27,28 @@
 @import "./pages/work";
 @import "./pages/about";
 @import "./pages/project";
+
+
+
+// Exemple de media queries
+
+    // On défini la map
+        $breakpoints: (
+        mobile: 599px
+        );
+
+    // La mixin définie avec @content qui sera remplacé automatiquement
+    @mixin mobile-only {
+        @media screen and (max-width: map-get($breakpoints, mobile)){
+            @content;
+        }
+    }
+
+    // L'include de la mixin avec le contenu qui remplace @content
+    .proj-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @include mobile-only{
+            grid-template-columns: 1fr;
+        }
+    }
